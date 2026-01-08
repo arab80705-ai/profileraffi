@@ -5,29 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio | Muhammad Raffi</title>
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Icon WA) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            background-color: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0d6efd, #0a58ca);
+            color: #fff;
         }
 
         header {
-            background-color: #0d6efd;
-            color: #fff;
-            padding: 60px 20px;
+            padding: 80px 20px 60px;
             text-align: center;
         }
 
+        /* FOTO PROFIL */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255,255,255,0.6);
+            margin-bottom: 20px;
+        }
+
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 600;
             margin-bottom: 10px;
         }
 
@@ -37,22 +52,25 @@
         }
 
         section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px 60px;
+            display: grid;
+            gap: 25px;
         }
 
         .card {
-            background: #fff;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .card h2 {
+            font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #0d6efd;
+            font-weight: 600;
         }
 
         ul {
@@ -60,26 +78,44 @@
         }
 
         ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
         }
 
         ul li:last-child {
             border-bottom: none;
         }
 
+        /* TOMBOL WHATSAPP */
+        .wa-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .wa-button:hover {
+            background: #1ebe5d;
+            transform: scale(1.05);
+        }
+
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #fff;
-            margin-top: 40px;
             font-size: 0.9rem;
-            color: #666;
+            opacity: 0.8;
         }
 
         @media (max-width: 600px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
         }
     </style>
@@ -87,6 +123,9 @@
 <body>
 
     <header>
+        <!-- FOTO PROFIL -->
+        <img src="profil.jpg" alt="Foto Muhammad Raffi" class="profile-img">
+
         <h1>Muhammad Raffi</h1>
         <p>Siswa Teknik Jaringan Komputer dan Telekomunikasi</p>
         <p>SMKS 1 Barunawati</p>
@@ -105,20 +144,20 @@
         <div class="card">
             <h2>Keahlian & Pengalaman</h2>
             <ul>
-                <li>Merakit dan menginstal sebuah PC</li>
+                <li>Merakit dan menginstal PC</li>
                 <li>Instalasi kabel jaringan (LAN)</li>
-                <li>Memahami topologi jaringan komputer</li>
-                <li>Membuat website sederhana menggunakan HTML & CSS</li>
+                <li>Memahami topologi jaringan</li>
+                <li>Membuat website sederhana (HTML & CSS)</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Tujuan</h2>
-            <p>
-                Saya ingin terus mengembangkan kemampuan di bidang jaringan komputer
-                dan teknologi informasi agar dapat bekerja secara profesional
-                di dunia IT.
-            </p>
+            <h2>Kontak</h2>
+            <!-- GANTI NOMOR WHATSAPP -->
+            <a href="https://wa.me/6281234567890" class="wa-button" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                Hubungi Saya
+            </a>
         </div>
     </section>
 
